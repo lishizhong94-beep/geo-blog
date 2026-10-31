@@ -3,8 +3,8 @@
 User-agent: *
 Allow: /
 
-# 站点地图（把 geo-lab.example.com 替换为真实域名）
-Sitemap: https://geo-lab.example.com/sitemap.xml
+# 站点地图
+Sitemap: https://lishizhong94-beep.github.io/geo-blog/sitemap.xml
 
 # 给大模型的站点说明
-# llms.txt: https://geo-lab.example.com/llms.txt
+# llms.txt: https://lishizhong94-beep.github.io/geo-blog/llms.txt
