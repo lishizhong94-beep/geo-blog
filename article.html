@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>什么是 GEO：它和传统 SEO 到底差在哪 · GEO 学习志</title>
+<meta name="description" content="一篇讲清 GEO（生成式引擎优化）：它的定义、AI 搜索的 RAG 工作机制、与传统 SEO 的核心区别，以及四个可以立即上手的 GEO 优化动作。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://geo-lab.example.com/article.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEO 学习志">
+<meta property="og:title" content="什么是 GEO：它和传统 SEO 到底差在哪">
+<meta property="og:description" content="GEO 的定义、AI 搜索的 RAG 机制、与 SEO 的区别，以及四个可立即上手的优化动作。">
+<meta property="og:url" content="https://geo-lab.example.com/article.html">
+<meta property="article:published_time" content="2026-10-31">
+<meta property="article:modified_time" content="2026-10-31">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f766e'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是 GEO：它和传统 SEO 到底差在哪",
+  "description": "GEO 的定义、AI 搜索的 RAG 工作机制、与传统 SEO 的核心区别，以及四个可立即上手的 GEO 优化动作。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-10-31",
+  "dateModified": "2026-10-31",
+  "author": { "@type": "Person", "name": "GEO 学习者", "url": "https://geo-lab.example.com/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GEO 学习志",
+    "logo": { "@type": "ImageObject", "url": "https://geo-lab.example.com/favicon.svg" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://geo-lab.example.com/article.html" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "GEO 会取代 SEO 吗？",
+      "acceptedAnswer": { "@type": "Answer", "text": "短期不会，两者是重叠而非替代关系。GEO 关注内容在 AI 生成答案中的可见度与被引用，SEO 仍负责传统搜索的抓取、索引与排名。成熟的做法是在同一套内容资产上同时做两者。" }
+    },
+    {
+      "@type": "Question",
+      "name": "做 GEO 需要会写代码吗？",
+      "acceptedAnswer": { "@type": "Answer", "text": "不需要。结构化数据可以用 AI 生成，llms.txt 是纯文本，内容与引用优化更是运营动作。无代码建站平台也能完整承载 GEO 所需的全部技术信号。" }
+    },
+    {
+      "@type": "Question",
+      "name": "GEO 优化多久能看到效果？",
+      "acceptedAnswer": { "@type": "Answer", "text": "没有确定时间，取决于 AI 爬虫的抓取频率与内容竞争度。更可靠的方式是把每次优化当作可对照的实验，用 GEO 监测工具追踪被提及与引用的变化，而不是等待一个固定周期。" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="mark">G</span>GEO 学习志</a>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="notes.html">学习笔记</a>
+      <a href="index.html#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="article wrap">
+    <div class="breadcrumb" style="font-size:13.5px;color:var(--muted);margin-bottom:18px;">
+      <a href="index.html">首页</a> &nbsp;/&nbsp; <a href="notes.html">学习笔记</a> &nbsp;/&nbsp; 正文
+    </div>
+    <h1>什么是 GEO：它和传统 SEO 到底差在哪</h1>
+    <div class="article-meta">
+      作者：GEO 学习者　·　发布于 2026-10-31　·　阅读约 8 分钟　·　主题：基础概念
+    </div>
+
+    <div class="callout">
+      <b>一句话先答：</b>GEO（Generative Engine Optimization，生成式引擎优化）是让你的内容在 AI 生成答案时被检索、选中并<b>准确引用</b>的一整套优化。传统 SEO 争夺的是搜索结果里的排名，GEO 争夺的是 AI 答案里的“被引用”。
+    </div>
+
+    <h2>一、先把定义说清楚</h2>
+    <p>当用户向 ChatGPT、Gemini、DeepSeek、豆包这类生成式 AI 提问时，模型并不会凭空作答。对需要实时或外部信息的问题，它会先去检索一批网页，再把检索到的内容综合成一段自然语言回答。GEO 研究的，就是如何让你的网页成为这批被检索、并最终被写进答案的内容。</p>
+
+    <h2>二、AI 搜索是怎么工作的（RAG 流程）</h2>
+    <p>理解机制是优化的前提。一次典型的 AI 检索生成，大致分四步：</p>
+    <ol>
+      <li><b>抓取与切分：</b>AI 爬虫抓取网页，把内容切成一个个语义块（chunk）；</li>
+      <li><b>检索召回：</b>根据用户问题，召回最相关的若干内容块；</li>
+      <li><b>筛选排序：</b>按相关性、权威性、信息密度等信号，决定采用哪些块；</li>
+      <li><b>生成引用：</b>把选中的内容综合成答案，并标注来源。</li>
+    </ol>
+    <blockquote>GEO 的所有动作，本质上都在提高内容在这四步里“活下来”的概率——先被找到，再被选中，最后被忠实引用。</blockquote>
+
+    <h2>三、GEO 和 SEO 的核心区别</h2>
+    <table>
+      <colgroup><col style="width:24%"><col style="width:38%"><col style="width:38%"></colgroup>
+      <thead>
+        <tr><th>对比维度</th><th>传统 SEO</th><th>GEO</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>目标位置</td><td>搜索结果页的排名</td><td>AI 生成答案中的引用</td></tr>
+        <tr><td>内容形态</td><td>关键词 + 整页优化</td><td>可被直接摘取的答案块</td></tr>
+        <tr><td>衡量方式</td><td>排名、点击、流量</td><td>被提及率、被引用率</td></tr>
+        <tr><td>关键信号</td><td>外链、关键词、权重</td><td>数据、权威来源、结构化</td></tr>
+      </tbody>
+    </table>
+
+    <h2>四、四个可以立即上手的动作</h2>
+    <ul>
+      <li><b>段首先答：</b>每段开头先给结论，再展开解释，方便 AI 直接摘取；</li>
+      <li><b>用具体数字：</b>把“增长显著”改成“同比增长 34%”（示例数据，发布前替换为真实来源）；</li>
+      <li><b>标注权威来源：</b>引用官方/学术/研究机构数据，并附可点击的原始链接；</li>
+      <li><b>配技术信号：</b>部署 JSON-LD 结构化数据与 llms.txt，保证站点可被抓取。</li>
+    </ul>
+
+    <div class="callout">
+      实操提示：本文头部的 <code>Article</code> 与 <code>FAQPage</code> 结构化数据就是可直接复用的模板。新增文章时复制并替换标题、日期与正文即可，无需从零写起。
+    </div>
+
+    <h2>常见问题</h2>
+    <div class="faq">
+      <h3>GEO 会取代 SEO 吗？</h3>
+      <p>短期不会，两者是重叠而非替代关系。GEO 关注内容在 AI 生成答案中的可见度与被引用，SEO 仍负责传统搜索的抓取、索引与排名。成熟的做法是在同一套内容资产上同时做两者。</p>
+    </div>
+    <div class="faq">
+      <h3>做 GEO 需要会写代码吗？</h3>
+      <p>不需要。结构化数据可以用 AI 生成，llms.txt 是纯文本，内容与引用优化更是运营动作。无代码建站平台也能完整承载 GEO 所需的全部技术信号。</p>
+    </div>
+    <div class="faq">
+      <h3>GEO 优化多久能看到效果？</h3>
+      <p>没有确定时间，取决于 AI 爬虫的抓取频率与内容竞争度。更可靠的方式是把每次优化当作可对照的实验，用 GEO 监测工具追踪被提及与引用的变化，而不是等待一个固定周期。</p>
+    </div>
+
+    <nav class="article-nav">
+      <a href="notes.html">&larr; 返回全部笔记</a>
+      <a href="index.html">回到首页</a>
+    </nav>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>&copy; 2026 GEO 学习志 · 公开学习，持续更新</div>
+    <div class="footer-links">
+      <a href="notes.html">学习笔记</a>
+      <a href="llms.txt">llms.txt</a>
+      <a href="robots.txt">robots.txt</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

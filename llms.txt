@@ -1,0 +1,25 @@
+# GEO 学习志
+
+> GEO 学习志是一个公开记录生成式引擎优化（GEO，Generative Engine Optimization，亦称 AIO）学习与实操的中文博客。
+> 内容围绕 AI 搜索的工作机制、内容引用优化、结构化数据（JSON-LD）与 llms.txt 展开，每篇文章都附验证方法，目标是帮助内容在 AI 生成答案时被准确检索与引用。
+> 站点语言为简体中文（zh-CN），采用纯静态 HTML，便于 AI 与人类爬虫直接读取。
+
+## 主要页面
+
+- [首页](https://geo-lab.example.com/): 站点定位、最新笔记与四步学习路径
+- [学习笔记](https://geo-lab.example.com/notes.html): 全部 GEO 学习笔记，按机制、内容、技术、监测分类
+- [示例文章：什么是 GEO](https://geo-lab.example.com/article.html): GEO 定义、RAG 工作机制、与 SEO 的区别及四个可上手动作
+
+## 核心主题
+
+- 生成式引擎优化（GEO/AIO）与传统 SEO 的区别与协作
+- AI 搜索的 RAG 流程：抓取、切分、召回、筛选、引用
+- 数据引用与权威来源对 AI 采信的影响
+- JSON-LD 结构化数据：WebSite、Person、Article、FAQPage、BreadcrumbList
+- llms.txt 与 robots.txt 的部署方式
+- GEO 效果监测与可复现的对照实验方法
+
+## 备注
+
+- 本文件遵循 llms.txt 规范，部署在站点根目录，供大模型快速理解站点结构。
+- 文中域名为占位地址，正式部署时将 geo-lab.example.com 替换为真实域名。

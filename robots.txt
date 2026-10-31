@@ -1,0 +1,10 @@
+# GEO 学习志 robots.txt
+# 允许所有爬虫（含 AI 爬虫）抓取全站
+User-agent: *
+Allow: /
+
+# 站点地图（把 geo-lab.example.com 替换为真实域名）
+Sitemap: https://geo-lab.example.com/sitemap.xml
+
+# 给大模型的站点说明
+# llms.txt: https://geo-lab.example.com/llms.txt
